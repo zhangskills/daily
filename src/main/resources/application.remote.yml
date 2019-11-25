@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: baidu-spider
+  profiles:
+    active: production
+    #    active: dev
+
+  freemarker.request-context-attribute: request
+
+  datasource:
+    url: jdbc:mysql://172.21.0.12:49006/daily?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: daily
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+#    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+  jackson:
+    locale: zh_CN
+    date-format: yyyy-MM-dd HH:mm:ss
+    mapper.default-view-inclusion: true
+    time-zone: GMT+8
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
