@@ -10,15 +10,11 @@ import javax.persistence.Entity;
 @Entity
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ArticleModel extends BaseModel {
+public class JonahomeHtmlModel extends BaseModel {
 
     private static final long serialVersionUID = 1L;
 
     private Integer week;
-    private Integer day;
-
-    @Column(length = 1024)
-    private String title;
 
     @Column(columnDefinition = "text")
     private String content;
