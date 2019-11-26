@@ -3,8 +3,11 @@ package my.service;
 import lombok.extern.slf4j.Slf4j;
 import my.model.JonahomeHtmlModel;
 import my.repository.JonahomeHtmlRepository;
+import my.utils.RegexUtils;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +40,27 @@ public class JonahomeHtmlService {
             jonahomeHtmlModel.setContent(new String(res.bodyAsBytes(), "gbk"));
             jonahomeHtmlRepository.save(jonahomeHtmlModel);
         }
+    }
+
+    public String getContent(int week) {
+        JonahomeHtmlModel jonahomeHtmlModel = jonahomeHtmlRepository.findTopByWeek(week);
+        if (jonahomeHtmlModel == null) {
+            return null;
+        }
+
+        Elements elements = Jsoup.parse(jonahomeHtmlModel.getContent()).select(".Section1");
+
+        StringBuilder sb = new StringBuilder();
+
+        for (Element e : elements.get(0).children()) {
+            if (!e.select("table[border=0]").isEmpty()) {
+                String s = e.select("td:contains(日)").get(0).text();
+                String day = RegexUtils.getFirst("(\\d+)", s);
+                log.info("====={}", day);
+                e.attr("id", "day" + day);
+            }
+            sb.append(e);
+        }
+        return sb.toString();
     }
 }
