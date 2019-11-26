@@ -1,4 +1,4 @@
-package my;
+package my.controller;
 
 import my.repository.JonahomeHtmlRepository;
 import my.service.JonahomeHtmlService;
@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 @Controller
 public class IndexController {
@@ -24,18 +26,25 @@ public class IndexController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(HttpServletResponse response) throws IOException {
         int week = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
-        response.sendRedirect("/" + week);
+        response.sendRedirect("/w" + week);
         return null;
     }
 
-    @RequestMapping(value = "/{week}", method = RequestMethod.GET)
+    @RequestMapping(value = "/w{week}", method = RequestMethod.GET)
     public String index(HttpServletRequest request, HttpServletResponse response,
                         @PathVariable("week") int week) throws IOException {
+        if (week < 0 || week > 52) {
+            response.sendRedirect("/");
+            return null;
+        }
+        String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE").format(new Date());
+        request.setAttribute("dateStr", dateStr);
+
         if (week > 0) {
-            request.setAttribute("lastUrl", "/" + (week - 1));
+            request.setAttribute("lastUrl", "/w" + (week - 1));
         }
         if (week < 52) {
-            request.setAttribute("nextUrl", "/" + (week + 1));
+            request.setAttribute("nextUrl", "/w" + (week + 1));
         }
 
         String content = jonahomeHtmlService.getContent(week);

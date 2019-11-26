@@ -12,6 +12,8 @@
     <div class="row" id="top">
         <div class="col-md-12" style="margin: 20px auto;">
 
+            <h4>当前日期：${dateStr}</h4>
+
             <div class="btn-toolbar" role="toolbar">
                 <div class="btn-group" role="group">
                     <a class="btn btn-primary" href="${lastUrl!}">上一篇</a>
