@@ -14,7 +14,7 @@ spring:
     url: jdbc:mysql://192.168.0.33:49006/daily?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     username: daily
     password: 123
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
 #    show-sql: true
