@@ -2,6 +2,7 @@ package my.service;
 
 import lombok.extern.slf4j.Slf4j;
 import my.model.JonahomeHtmlModel;
+import my.repository.JonahomeHtmlRepository;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
