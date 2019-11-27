@@ -38,9 +38,8 @@ public class IndexController {
             response.sendRedirect("/");
             return null;
         }
-
-        String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE",Locale.CHINA).format(new Date());
-        request.setAttribute("dateStr", dateStr);
+        String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE", Locale.CHINA).format(new Date());
+        request.setAttribute("dateStr", dateStr + " 第" + Calendar.getInstance().get(Calendar.WEEK_OF_YEAR) + "周");
 
         if (week > 0) {
             request.setAttribute("lastUrl", "/w" + (week - 1));

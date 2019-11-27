@@ -64,10 +64,13 @@ public class JonahomeHtmlService {
         StringBuilder sb = new StringBuilder();
         for (Element e : elements.get(0).children()) {
             if (!e.select("table[border=0]").isEmpty()) {
+                e.select("td:contains(第)").get(0).attr("width", "20%");
                 String s = e.select("td:contains(日)").get(0).text();
                 String day = RegexUtils.getFirst("(\\d+)", s);
 //                log.info("====={}", day);
-                e.attr("id", "day" + day).attr("width", "80%");
+                e.attr("id", "day" + day)
+                        .attr("width", "80%")
+                        .attr("style", "margin: 10px auto 0 auto;");
             }
             sb.append(e);
         }
