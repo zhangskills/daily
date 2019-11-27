@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 @Controller
 public class IndexController {
@@ -37,7 +38,8 @@ public class IndexController {
             response.sendRedirect("/");
             return null;
         }
-        String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE").format(new Date());
+
+        String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE",Locale.CHINA).format(new Date());
         request.setAttribute("dateStr", dateStr);
 
         if (week > 0) {
