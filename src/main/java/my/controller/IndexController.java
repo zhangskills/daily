@@ -1,6 +1,5 @@
-package my;
+package my.controller;
 
-import my.repository.JonahomeHtmlRepository;
 import my.service.JonahomeHtmlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,8 +15,6 @@ import java.util.Calendar;
 @Controller
 public class IndexController {
 
-    @Autowired
-    private JonahomeHtmlRepository jonahomeHtmlRepository;
     @Autowired
     private JonahomeHtmlService jonahomeHtmlService;
 
