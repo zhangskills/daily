@@ -47,6 +47,7 @@ public class IndexController {
 
         String content = jonahomeHtmlService.getContent(week);
         request.setAttribute("content", content);
+        request.setAttribute("week", week);
 
         return "index";
     }
