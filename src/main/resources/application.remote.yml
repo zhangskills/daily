@@ -8,7 +8,9 @@ spring:
     active: production
     #    active: dev
 
-  freemarker.request-context-attribute: request
+  freemarker:
+    suffix: .ftl
+    request-context-attribute: request
 
   datasource:
     url: jdbc:mysql://192.168.0.33:49006/daily?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
