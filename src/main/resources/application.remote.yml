@@ -1,6 +1,14 @@
 server:
   port: 8080
 
+  jetty:
+    acceptors: 1
+    selectors: 1
+    min-threads: 1
+    max-threads: 10
+    thread-idle-timeout: 10s
+    connection-idle-timeout: 60s
+
 spring:
   application:
     name: daily
@@ -20,8 +28,8 @@ spring:
 
   jpa:
 #    show-sql: true
-    generate-ddl: true
-    hibernate.ddl-auto: update
+#    generate-ddl: true
+#    hibernate.ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5Dialect
 
   jackson:
@@ -30,4 +38,5 @@ spring:
     mapper.default-view-inclusion: true
     time-zone: GMT+8
   mvc:
-    date-format: yyyy-MM-dd HH:mm:ss
+    format:
+      date: yyyy-MM-dd HH:mm:ss
