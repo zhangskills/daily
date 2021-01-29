@@ -3,27 +3,21 @@ package my.repository;
 import lombok.extern.slf4j.Slf4j;
 import my.Application;
 import my.model.JonahomeHtmlModel;
-import my.service.JonahomeHtmlService;
+import my.model.query.QJonahomeHtmlModel;
 import my.utils.RegexUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(classes = Application.class)
 @Slf4j
 public class JonahomeHtmlRepositoryTest {
 
-    @Autowired
-    private JonahomeHtmlRepository jonahomeHtmlRepository;
-    @Autowired
-    private JonahomeHtmlService jonahomeHtmlService;
-
     @Test
     public void findTopByWeek() {
-        JonahomeHtmlModel jonahomeHtmlModel = jonahomeHtmlRepository.findTopByWeek(1);
+        JonahomeHtmlModel jonahomeHtmlModel = new QJonahomeHtmlModel().week.eq(1).findOne();
 //        System.out.println(jonahomeHtmlModel.getContent());
 
         Elements elements = Jsoup.parse(jonahomeHtmlModel.getContent()).select(".Section1");

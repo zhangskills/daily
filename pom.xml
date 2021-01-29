@@ -6,6 +6,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <ebean.version>12.6.5</ebean.version>
     </properties>
 
     <!-- Inherit defaults from Spring Boot -->
@@ -39,15 +40,42 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
+        <!--jetty容器支持jsp start-->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>apache-jsp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>apache-jstl</artifactId>
+        </dependency>
+        <!--jetty容器支持jsp end-->
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <groupId>io.ebean</groupId>
+            <artifactId>ebean</artifactId>
+            <version>${ebean.version}</version>
+        </dependency>
+
+        <!-- Query bean support -->
+        <dependency>
+            <groupId>io.ebean</groupId>
+            <artifactId>ebean-querybean</artifactId>
+            <version>${ebean.version}</version>
+        </dependency>
+
+        <!-- APT Query bean generation for Java -->
+        <dependency>
+            <groupId>io.ebean</groupId>
+            <artifactId>querybean-generator</artifactId>
+            <version>${ebean.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.3.3</version>
         </dependency>
 
         <dependency>
@@ -79,6 +107,18 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>2.17</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>io.ebean.tile:enhancement:${ebean.version}</tile>
+                    </tiles>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
@@ -94,6 +134,13 @@
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.activation</groupId>
+                        <artifactId>activation</artifactId>
+                        <version>1.1.1</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
