@@ -4,6 +4,8 @@ git pull
 
 mvn clean package -DskipTests=true dockerfile:build
 
+docker rm -f daily
+
 docker run -d --name daily -it \
   -e JAVA_OPTS='-Xmx256m -Dfile.encoding=UTF-8' \
   -v /etc/localtime:/etc/localtime:ro \
