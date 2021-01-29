@@ -11,7 +11,7 @@ ADD src/main/resources/logback.remote.xml ./logback.xml
 
 VOLUME /usr/src/myapp/logs
 
-ENV JAVA_OPTS='-Xms128m -Xmx512m -Dfile.encoding=UTF-8'
+ENV JAVA_OPTS='-Xms64m -Xmx128m -Dfile.encoding=UTF-8'
 
 RUN echo "#!/bin/bash"> run.sh && chmod +x run.sh
 RUN echo "java -jar \${JAVA_OPTS} ${JAR_FILE}" >> run.sh
