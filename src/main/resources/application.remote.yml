@@ -22,6 +22,9 @@ spring:
     mapper.default-view-inclusion: true
     time-zone: GMT+8
   mvc:
+    view:
+      prefix: /
+      suffix: .jsp
     format:
       date: yyyy-MM-dd HH:mm:ss
 

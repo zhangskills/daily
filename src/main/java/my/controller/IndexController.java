@@ -49,6 +49,6 @@ public class IndexController {
         request.setAttribute("content", content);
         request.setAttribute("week", week);
 
-        return "index";
+        return "WEB-INF/view/index";
     }
 }

@@ -1,3 +1,8 @@
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,7 +27,7 @@
 
             <div class="btn-toolbar" role="toolbar">
                 <div class="btn-group" role="group">
-                    <a class="btn btn-primary" href="${lastUrl!}">上一篇</a>
+                    <a class="btn btn-primary" href="${lastUrl}">上一篇</a>
                 </div>
 
                 <div class="btn-group" role="group">
@@ -34,13 +39,13 @@
                     <a href="#day6" class="btn btn-default">6、7</a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a class="btn btn-primary" href="${nextUrl!}">下一篇</a>
+                    <a class="btn btn-primary" href="${nextUrl}">下一篇</a>
                 </div>
             </div>
 
         </div>
         <div class="col-md-12">
-            ${content!}
+            ${content}
         </div>
     </div>
     <a href="#top" style="position:fixed;right:1em;bottom:1em;"> 返回顶部 </a>
