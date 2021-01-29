@@ -19,7 +19,7 @@
     <groupId>my</groupId>
     <artifactId>daily</artifactId>
     <version>1.1-SNAPSHOT</version>
-
+    <packaging>war</packaging>
 
     <!-- Add typical dependencies for a web application -->
     <dependencies>
@@ -131,7 +131,7 @@
                     <repository>daily</repository>
                     <tag>${project.version}</tag>
                     <buildArgs>
-                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+                        <JAR_FILE>${project.build.finalName}.war</JAR_FILE>
                     </buildArgs>
                 </configuration>
                 <dependencies>
