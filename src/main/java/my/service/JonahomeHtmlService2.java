@@ -7,7 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
-import org.springframework.util.StringUtils;
+import spark.utils.StringUtils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
