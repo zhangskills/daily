@@ -15,6 +15,6 @@ VOLUME /usr/src/myapp/logs
 ENV JAVA_OPTS='-Xmx128m -Dfile.encoding=UTF-8'
 
 RUN echo "#!/bin/bash"> run.sh && chmod +x run.sh
-RUN echo "java -jar \${JAVA_OPTS} ${PROJECT_NAME}.jar" >> run.sh
+RUN echo "java -jar -Dlogback.configurationFile=logback.xml \${JAVA_OPTS} ${PROJECT_NAME}.jar" >> run.sh
 
 CMD ["./run.sh"]
