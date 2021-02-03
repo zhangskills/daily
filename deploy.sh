@@ -2,6 +2,9 @@
 
 git pull
 
+cp src/main/resources/application.remote.yml src/main/resources/application.yml
+cp src/main/resources/logback.remote.xml src/main/resources/logback.xml
+
 mvn clean package -DskipTests=true dockerfile:build
 
 docker rm -f daily
