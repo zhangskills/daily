@@ -7,6 +7,9 @@ ARG PROJECT_NAME
 ADD target/${PROJECT_NAME}.jar ./
 ADD target/lib ./lib
 
+ADD src/main/resources/application.remote.yml ./application.yml
+ADD src/main/resources/logback.remote.xml ./logback.xml
+
 VOLUME /usr/src/myapp/logs
 
 ENV JAVA_OPTS='-Xmx128m -Dfile.encoding=UTF-8'
