@@ -1,6 +1,6 @@
 package my.controller;
 
-import my.config.FreeMarkerTemplateEngine;
+import my.config.TemplateEngineFactory;
 import my.service.JonahomeHtmlService;
 
 import java.text.SimpleDateFormat;
@@ -21,7 +21,6 @@ public class IndexController {
         });
 
         get("/w/:week", (req, res) -> {
-
             Map<String, Object> attributes = new HashMap<>();
 
             int week = Integer.parseInt(req.params("week"));
@@ -44,6 +43,6 @@ public class IndexController {
             attributes.put("week", week);
 
             return modelAndView(attributes, "index.ftl");
-        }, FreeMarkerTemplateEngine.getInstance());
+        }, TemplateEngineFactory.getFreeMarkerTemplateEngine());
     }
 }
