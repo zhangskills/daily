@@ -1,54 +1,49 @@
 package my.controller;
 
+import my.config.FreeMarkerTemplateEngine;
 import my.service.JonahomeHtmlService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+import java.util.*;
 
-@Controller
+import static spark.Spark.get;
+import static spark.Spark.modelAndView;
+
 public class IndexController {
 
-    @Autowired
-    private JonahomeHtmlService jonahomeHtmlService;
+    private JonahomeHtmlService jonahomeHtmlService = new JonahomeHtmlService();
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(HttpServletResponse response) throws IOException {
-        int week = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
-        response.sendRedirect("/w" + week);
-        return null;
-    }
-
-    @RequestMapping(value = "/w{week}", method = RequestMethod.GET)
-    public String index(HttpServletRequest request, HttpServletResponse response,
-                        @PathVariable("week") int week) throws IOException {
-        if (week < 0 || week > 52) {
-            response.sendRedirect("/");
+    public IndexController() {
+        get("/", (req, res) -> {
+            int week = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+            res.redirect("/w/" + week);
             return null;
-        }
-        String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE", Locale.CHINA).format(new Date());
-        request.setAttribute("dateStr", dateStr + " 第" + Calendar.getInstance().get(Calendar.WEEK_OF_YEAR) + "周");
+        });
 
-        if (week > 0) {
-            request.setAttribute("lastUrl", "/w" + (week - 1));
-        }
-        if (week < 52) {
-            request.setAttribute("nextUrl", "/w" + (week + 1));
-        }
+        get("/w/:week", (req, res) -> {
 
-        String content = jonahomeHtmlService.getContent(week);
-        request.setAttribute("content", content);
-        request.setAttribute("week", week);
+            Map<String, Object> attributes = new HashMap<>();
 
-        return "WEB-INF/view/index";
+            int week = Integer.parseInt(req.params("week"));
+            if (week < 0 || week > 52) {
+                res.redirect("/");
+                return null;
+            }
+            String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE", Locale.CHINA).format(new Date());
+            attributes.put("dateStr", dateStr + " 第" + Calendar.getInstance().get(Calendar.WEEK_OF_YEAR) + "周");
+
+            if (week > 0) {
+                attributes.put("lastUrl", "/w/" + (week - 1));
+            }
+            if (week < 52) {
+                attributes.put("nextUrl", "/w/" + (week + 1));
+            }
+
+            String content = jonahomeHtmlService.getContent(week);
+            attributes.put("content", content);
+            attributes.put("week", week);
+
+            return modelAndView(attributes, "index.ftl");
+        }, FreeMarkerTemplateEngine.getInstance());
     }
 }

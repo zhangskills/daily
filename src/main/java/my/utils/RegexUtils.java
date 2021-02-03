@@ -1,39 +1,22 @@
 package my.utils;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.DigestUtils;
-import org.springframework.util.StringUtils;
+import spark.utils.CollectionUtils;
+import spark.utils.StringUtils;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Slf4j
 public abstract class RegexUtils {
 
-    private static Map<String, Pattern> patternMap = new ConcurrentHashMap<>();
-
-    private static int timeoutMillis = 30_000;
-
-    public static void setTimeoutMillis(int timeoutMillis) {
-        RegexUtils.timeoutMillis = timeoutMillis;
-    }
-
-    private static Matcher createMatcherWithTimeout(String content, String regex) {
-        String key = DigestUtils.md5DigestAsHex(regex.getBytes());
-        Pattern p = patternMap.get(key);
-        if (p == null) {
-            p = Pattern.compile(regex, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
-            patternMap.put(key, p);
-        }
-        CharSequence charSequence = new TimeoutRegexCharSequence(content, timeoutMillis, content, regex);
-        return p.matcher(charSequence);
+    private static Matcher createMatcher(String content, String regex) {
+        Pattern p = Pattern.compile(regex, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
+        return p.matcher(content);
     }
 
 
@@ -44,7 +27,7 @@ public abstract class RegexUtils {
         if (content.contains(regex)) {
             return true;
         }
-        Matcher m = createMatcherWithTimeout(content, regex);
+        Matcher m = createMatcher(content, regex);
         return m.find();
     }
 
@@ -52,7 +35,7 @@ public abstract class RegexUtils {
         if (StringUtils.isEmpty(regex) || StringUtils.isEmpty(content)) {
             return "";
         }
-        Matcher m = createMatcherWithTimeout(content, regex);
+        Matcher m = createMatcher(content, regex);
         if (m.groupCount() < 1) {
             throw new IllegalArgumentException("regex必须一个以上的分组 regex:" + regex);
         }
@@ -67,7 +50,7 @@ public abstract class RegexUtils {
         if (StringUtils.isEmpty(regex) || StringUtils.isEmpty(content)) {
             return line;
         }
-        Matcher m = createMatcherWithTimeout(content, regex);
+        Matcher m = createMatcher(content, regex);
         if (m.find()) {
             int len = m.groupCount();
             if (len < 1) {
@@ -107,7 +90,7 @@ public abstract class RegexUtils {
         if (StringUtils.isEmpty(regex) || StringUtils.isEmpty(content)) {
             return list;
         }
-        Matcher m = createMatcherWithTimeout(content, regex);
+        Matcher m = createMatcher(content, regex);
         int len = m.groupCount();
         if (len < 1) {
             throw new IllegalArgumentException("regex必须一个以上的分组 regex:" + regex);

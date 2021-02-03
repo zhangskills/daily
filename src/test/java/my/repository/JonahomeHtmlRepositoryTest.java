@@ -1,17 +1,14 @@
 package my.repository;
 
 import lombok.extern.slf4j.Slf4j;
-import my.Application;
 import my.model.JonahomeHtmlModel;
 import my.model.query.QJonahomeHtmlModel;
 import my.utils.RegexUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Test;
 
-@SpringBootTest(classes = Application.class)
 @Slf4j
 public class JonahomeHtmlRepositoryTest {
 
