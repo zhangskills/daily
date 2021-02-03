@@ -1,21 +1,19 @@
 package my;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import my.controller.IndexController;
+
+import static spark.Spark.port;
+import static spark.Spark.threadPool;
 
 @Slf4j
-@SpringBootApplication
-@EnableJpaRepositories
-@EntityScan
-@EnableJpaAuditing
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        threadPool(5, 1, 30_000);
+        port(8080);
+
+        new IndexController();
     }
 
 }

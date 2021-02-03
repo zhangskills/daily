@@ -1,31 +1,29 @@
 package my.model.base;
 
+import io.ebean.Model;
+import io.ebean.annotation.WhenCreated;
+import io.ebean.annotation.WhenModified;
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import lombok.EqualsAndHashCode;
 
-import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.util.Date;
 
+@EqualsAndHashCode(callSuper = true)
 @MappedSuperclass
-@EntityListeners({AuditingEntityListener.class})
 @Data
-public class BaseModel implements Serializable {
+public class BaseModel extends Model implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(generator = "snowFlakeId")
-    @GenericGenerator(name = "snowFlakeId", strategy = "my.auditor.SnowflakeId")
     private Long id;
 
-    @CreatedDate
-    @Column(updatable = false)
+    @WhenCreated
     private Date createDate;
 
-    @LastModifiedDate
+    @WhenModified
     private Date updateDate;
 }

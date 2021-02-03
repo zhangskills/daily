@@ -7,8 +7,9 @@
     <title>每日与主同行</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <style type="text/css">
-        body{ background:#fff; font-size: 13px; color: #333; line-height: 25px;}
-        table{line-height: 22px;}
+        body { background: #fff; font-size: 18px; color: #333; line-height: 30px;}
+
+        table {line-height: 25px;}
     </style>
 </head>
 <body>
@@ -16,11 +17,12 @@
     <div class="row" id="top">
         <div class="col-md-12" style="margin: 20px auto;">
 
-            <h4>当前日期：${dateStr}</h4>
+            <h3>第${week}周</h3>
+            <h4>${dateStr} <a href="/">回到本周</a></h4>
 
             <div class="btn-toolbar" role="toolbar">
                 <div class="btn-group" role="group">
-                    <a class="btn btn-primary" href="${lastUrl!}">上一篇</a>
+                    <a class="btn btn-primary" href="${lastUrl}">上一篇</a>
                 </div>
 
                 <div class="btn-group" role="group">
@@ -32,13 +34,13 @@
                     <a href="#day6" class="btn btn-default">6、7</a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a class="btn btn-primary" href="${nextUrl!}">下一篇</a>
+                    <a class="btn btn-primary" href="${nextUrl}">下一篇</a>
                 </div>
             </div>
 
         </div>
         <div class="col-md-12">
-            ${content!}
+            ${content}
         </div>
     </div>
     <a href="#top" style="position:fixed;right:1em;bottom:1em;"> 返回顶部 </a>

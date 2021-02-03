@@ -1,41 +1,20 @@
 package my.repository;
 
 import lombok.extern.slf4j.Slf4j;
-import my.Application;
 import my.model.JonahomeHtmlModel;
-import my.service.JonahomeHtmlService;
-import my.service.JonahomeHtmlService2;
+import my.model.query.QJonahomeHtmlModel;
 import my.utils.RegexUtils;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.StringUtils;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringBootTest(classes = Application.class)
 @Slf4j
 public class JonahomeHtmlRepositoryTest {
 
-    @Autowired
-    private JonahomeHtmlRepository jonahomeHtmlRepository;
-    @Autowired
-    private JonahomeHtmlService jonahomeHtmlService;
-
     @Test
     public void findTopByWeek() {
-        JonahomeHtmlModel jonahomeHtmlModel = jonahomeHtmlRepository.findTopByWeek(1);
+        JonahomeHtmlModel jonahomeHtmlModel = new QJonahomeHtmlModel().week.eq(1).findOne();
 //        System.out.println(jonahomeHtmlModel.getContent());
 
         Elements elements = Jsoup.parse(jonahomeHtmlModel.getContent()).select(".Section1");
@@ -51,18 +30,5 @@ public class JonahomeHtmlRepositoryTest {
         }
 
 //        System.out.println(elements.select("table[border=0]"));
-    }
-
-    /**
-     * from http://www.jonahome.net/files02/PI_DailyWalk/gb/
-     */
-    @Test
-    public void saveGitBook() throws IOException {
-
-        for (int i = 101; i < 366; i++) {
-            JonahomeHtmlService2.crawl(i);
-        }
-
-
     }
 }

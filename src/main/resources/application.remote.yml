@@ -1,33 +1,12 @@
-server:
-  port: 8080
+#ebean:
+#  ddl:
+#    generate: true
+#    run: true
+#    createOnly: true
 
-spring:
-  application:
-    name: daily
-  profiles:
-    active: production
-    #    active: dev
-
-  freemarker:
-    suffix: .ftl
-    request-context-attribute: request
-
-  datasource:
+datasource:
+  db:
     url: jdbc:mysql://192.168.0.33:49006/daily?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     username: daily
     password: 123
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-#    show-sql: true
-    generate-ddl: true
-    hibernate.ddl-auto: update
-    database-platform: org.hibernate.dialect.MySQL5Dialect
-
-  jackson:
-    locale: zh_CN
-    date-format: yyyy-MM-dd HH:mm:ss
-    mapper.default-view-inclusion: true
-    time-zone: GMT+8
-  mvc:
-    date-format: yyyy-MM-dd HH:mm:ss
+    driver: com.mysql.cj.jdbc.Driver
