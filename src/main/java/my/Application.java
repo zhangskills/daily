@@ -1,10 +1,9 @@
 package my;
 
 import lombok.extern.slf4j.Slf4j;
-import my.controller.IndexController;
+import my.route.IndexRoute;
 
-import static spark.Spark.port;
-import static spark.Spark.threadPool;
+import static spark.Spark.*;
 
 @Slf4j
 public class Application {
@@ -13,7 +12,8 @@ public class Application {
         threadPool(5, 1, 30_000);
         port(8080);
 
-        new IndexController();
+        get("/", IndexRoute.indexRoute);
+        get("/w/:week", IndexRoute.weekRoute);
     }
 
 }
