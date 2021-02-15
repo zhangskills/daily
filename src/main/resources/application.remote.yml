@@ -6,7 +6,7 @@
 
 datasource:
   db:
-    url: jdbc:mysql://192.168.0.33:49006/daily?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:postgresql://192.168.0.33:5432/daily?useSSL=false
     username: daily
-    password: 123
-    driver: com.mysql.cj.jdbc.Driver
+    password: jduioyiouq
+    driver: org.postgresql.Driver
