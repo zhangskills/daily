@@ -9,6 +9,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 @Slf4j
 public class JonahomeHtmlRepositoryTest {
 
@@ -30,5 +36,13 @@ public class JonahomeHtmlRepositoryTest {
         }
 
 //        System.out.println(elements.select("table[border=0]"));
+    }
+
+    @Test
+    public void saveHtmlByDB() throws IOException {
+        List<JonahomeHtmlModel> list = new QJonahomeHtmlModel().findList();
+        for (JonahomeHtmlModel jonahomeHtmlModel : list) {
+            Files.write(Paths.get(jonahomeHtmlModel.getWeek() + ".html"), jonahomeHtmlModel.getContent().getBytes());
+        }
     }
 }
