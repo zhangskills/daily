@@ -35,7 +35,7 @@ public class IndexRoute {
             attributes.put("nextUrl", "/w/" + (week + 1));
         }
 
-        String content = jonahomeHtmlService.getContent(week);
+        String content = jonahomeHtmlService.getContentByHtml(week);
         attributes.put("content", content);
         attributes.put("week", week);
 

@@ -21,7 +21,7 @@ public class JonahomeHtmlRepositoryTest {
     @Test
     public void findTopByWeek() {
         JonahomeHtmlModel jonahomeHtmlModel = new QJonahomeHtmlModel().week.eq(1).findOne();
-//        System.out.println(jonahomeHtmlModel.getContent());
+//        System.out.println(jonahomeHtmlModel.getContentByDB());
 
         Elements elements = Jsoup.parse(jonahomeHtmlModel.getContent()).select(".Section1");
 

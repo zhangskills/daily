@@ -8,6 +8,7 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import spark.utils.IOUtils;
 
 import java.io.IOException;
 
@@ -36,13 +37,21 @@ public class JonahomeHtmlService {
         }
     }
 
-    public String getContent(int week) {
+    public String getContentByHtml(int week) throws IOException {
+        String html = IOUtils.toString(JonahomeHtmlService.class.getResourceAsStream("/jonahome/" + week + ".html"));
+        return formatContent(html);
+    }
+
+    public String getContentByDB(int week) {
         JonahomeHtmlModel jonahomeHtmlModel = new QJonahomeHtmlModel().week.eq(week).findOne();
         if (jonahomeHtmlModel == null) {
             return null;
         }
+        return formatContent(jonahomeHtmlModel.getContent());
+    }
 
-        Elements elements = Jsoup.parse(jonahomeHtmlModel.getContent()).select(".Section1");
+    private String formatContent(String html) {
+        Elements elements = Jsoup.parse(html).select(".Section1");
 
         // 去掉过宽的width
         elements.select("[width]").forEach(e -> {
