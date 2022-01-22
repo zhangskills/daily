@@ -11,7 +11,7 @@ import io.jooby.Jooby;
 import io.jooby.ModelAndView;
 import my.service.JonahomeHtmlService;
 
-public class IndexRoute extends Jooby {
+public class DailyByWeekRoute extends Jooby {
 
     private JonahomeHtmlService jonahomeHtmlService = new JonahomeHtmlService();
 
@@ -44,8 +44,7 @@ public class IndexRoute extends Jooby {
             attributes.put("content", content);
             attributes.put("week", week);
 
-            return new ModelAndView("index.ftl", attributes);
+            return new ModelAndView("daily.ftl", attributes);
         });
     }
-
 }

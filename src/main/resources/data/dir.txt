@@ -1,0 +1,701 @@
+/nt
+/nt/12Rev
+/nt/12Rev/rev204-s
+/nt/12Rev/rev203-s
+/nt/12Rev/rev202-s
+/nt/12Rev/rev206-s
+/nt/12Rev/rev201-s
+/nt/12Rev/rev205-s
+/nt/11Heb-Jude
+/nt/11Heb-Jude/heb5-s
+/nt/11Heb-Jude/jude2-s
+/nt/11Heb-Jude/heb1-s
+/nt/11Heb-Jude/heb11-s
+/nt/11Heb-Jude/james3-s
+/nt/11Heb-Jude/1peter2-s
+/nt/11Heb-Jude/1jn3-s
+/nt/11Heb-Jude/2peter1-s
+/nt/11Heb-Jude/1peter6-s
+/nt/11Heb-Jude/james7-s
+/nt/11Heb-Jude/heb6-s
+/nt/11Heb-Jude/2jn1-s
+/nt/11Heb-Jude/jude1-s
+/nt/11Heb-Jude/heb8-s
+/nt/11Heb-Jude/heb2-s
+/nt/11Heb-Jude/1jn4-s
+/nt/11Heb-Jude/heb12-s
+/nt/11Heb-Jude/1peter1-s
+/nt/11Heb-Jude/2peter2-s
+/nt/11Heb-Jude/james4-s
+/nt/11Heb-Jude/1peter5-s
+/nt/11Heb-Jude/heb7-s
+/nt/11Heb-Jude/heb3-s
+/nt/11Heb-Jude/heb9-s
+/nt/11Heb-Jude/james1-s
+/nt/11Heb-Jude/heb13-s
+/nt/11Heb-Jude/1peter4-s
+/nt/11Heb-Jude/james5-s
+/nt/11Heb-Jude/1jn1-s
+/nt/11Heb-Jude/heb4-s
+/nt/11Heb-Jude/1peter3-s
+/nt/11Heb-Jude/james2-s
+/nt/11Heb-Jude/james8-s
+/nt/11Heb-Jude/heb10-s
+/nt/11Heb-Jude/1jn2-s
+/nt/11Heb-Jude/james6-s
+/nt/11Heb-Jude/1peter7-s
+/nt/10Gal-Phm
+/nt/10Gal-Phm/gal7-s
+/nt/10Gal-Phm/gal3-s
+/nt/10Gal-Phm/eph2-s
+/nt/10Gal-Phm/titus-s
+/nt/10Gal-Phm/1tim5-s
+/nt/10Gal-Phm/eph8-s
+/nt/10Gal-Phm/1tim1-s
+/nt/10Gal-Phm/col4-s
+/nt/10Gal-Phm/eph6-s
+/nt/10Gal-Phm/gal4-s
+/nt/10Gal-Phm/phil3-s
+/nt/10Gal-Phm/col3-s
+/nt/10Gal-Phm/eph1-s
+/nt/10Gal-Phm/col9-s
+/nt/10Gal-Phm/1tim6-s
+/nt/10Gal-Phm/2tim1-s
+/nt/10Gal-Phm/1tim2-s
+/nt/10Gal-Phm/col7-s
+/nt/10Gal-Phm/eph5-s
+/nt/10Gal-Phm/gal5-s
+/nt/10Gal-Phm/eph10-s
+/nt/10Gal-Phm/gal1-s
+/nt/10Gal-Phm/phil2-s
+/nt/10Gal-Phm/1tim7-s
+/nt/10Gal-Phm/col8-s
+/nt/10Gal-Phm/col2-s
+/nt/10Gal-Phm/thess2-s
+/nt/10Gal-Phm/phm-s
+/nt/10Gal-Phm/eph4-s
+/nt/10Gal-Phm/1tim3-s
+/nt/10Gal-Phm/gal6-s
+/nt/10Gal-Phm/phil1-s
+/nt/10Gal-Phm/gal2-s
+/nt/10Gal-Phm/1tim4-s
+/nt/10Gal-Phm/eph3-s
+/nt/10Gal-Phm/thess1-s
+/nt/10Gal-Phm/col1-s
+/nt/10Gal-Phm/col5-s
+/nt/10Gal-Phm/2tim3-s
+/nt/01Gospels
+/nt/01Gospels/Background2-s
+/nt/01Gospels/gospel-intro3-s
+/nt/01Gospels/gospel-intro2-s
+/nt/01Gospels/herods1-s
+/nt/07Acts
+/nt/07Acts/acts04-s
+/nt/07Acts/acts010-s
+/nt/07Acts/acts09-s
+/nt/07Acts/acts03-s
+/nt/07Acts/acts07-s
+/nt/07Acts/acts02-s
+/nt/07Acts/acts08-s
+/nt/07Acts/acts06-s
+/nt/07Acts/acts01-s
+/nt/07Acts/acts05-s
+/nt/08Rom
+/nt/08Rom/romans003-s
+/nt/08Rom/romans007-s
+/nt/08Rom/romans004-s
+/nt/08Rom/170827-s
+/nt/08Rom/romans001-s
+/nt/08Rom/romans005-s
+/nt/08Rom/romans002-s
+/nt/08Rom/romans006-s
+/nt/04Lk
+/nt/04Lk/lk5-s
+/nt/04Lk/lk12-s
+/nt/04Lk/lk1-s
+/nt/04Lk/lk6-s
+/nt/04Lk/lk8-s
+/nt/04Lk/lk2-s
+/nt/04Lk/lk11-s
+/nt/04Lk/lk7-s
+/nt/04Lk/lk3-s
+/nt/04Lk/lk9-s
+/nt/04Lk/lk10-s
+/nt/04Lk/lk4-s
+/nt/04Lk/lk13-s
+/nt/09Cor
+/nt/09Cor/1cor05-s
+/nt/09Cor/1cor01-s
+/nt/09Cor/1cor11-s
+/nt/09Cor/2cor03-s
+/nt/09Cor/1cor15-s
+/nt/09Cor/1cor06-s
+/nt/09Cor/1cor02-s
+/nt/09Cor/1cor08-s
+/nt/09Cor/2cor04-s
+/nt/09Cor/1cor12-s
+/nt/09Cor/1cor16-s
+/nt/09Cor/1cor07-s
+/nt/09Cor/1cor09-s
+/nt/09Cor/1cor03-s
+/nt/09Cor/2cor05-s
+/nt/09Cor/1cor13-s
+/nt/09Cor/2cor01-s
+/nt/09Cor/1cor04-s
+/nt/09Cor/1cor10-s
+/nt/09Cor/2cor06-s
+/nt/09Cor/2cor02-s
+/nt/09Cor/1cor14-s
+/nt/02Mt
+/nt/02Mt/mt13-s
+/nt/02Mt/mt19-s
+/nt/02Mt/mt4-s
+/nt/02Mt/mt17-s
+/nt/02Mt/mt3-s
+/nt/02Mt/mt9-s
+/nt/02Mt/mt10-s
+/nt/02Mt/mt14-s
+/nt/02Mt/mt7-s
+/nt/02Mt/mt8-s
+/nt/02Mt/mt2-s
+/nt/02Mt/mt11-s
+/nt/02Mt/mt15-s
+/nt/02Mt/mt6-s
+/nt/02Mt/mt1a-s
+/nt/02Mt/mt18-s
+/nt/02Mt/mt12-s
+/nt/02Mt/mt1-s
+/nt/02Mt/mt5-s
+/nt/02Mt/mt16-s
+/nt/05Jn
+/nt/05Jn/jn33+34-s
+/nt/05Jn/jn5-s
+/nt/05Jn/jn24-s
+/nt/05Jn/jn20-s
+/nt/05Jn/jn41-s
+/nt/05Jn/jn1-s
+/nt/05Jn/jn39-s
+/nt/05Jn/jn18-s
+/nt/05Jn/jn12-s
+/nt/05Jn/jn37-s
+/nt/05Jn/jn6-s
+/nt/05Jn/jn27-s
+/nt/05Jn/jn8-s
+/nt/05Jn/jn23-s
+/nt/05Jn/jn2-s
+/nt/05Jn/jn42-s
+/nt/05Jn/jn38-s
+/nt/05Jn/jn32-s
+/nt/05Jn/jn17-s
+/nt/05Jn/jn19-s
+/nt/05Jn/jn36-s
+/nt/05Jn/jn26-s
+/nt/05Jn/jn7-s
+/nt/05Jn/jn43-s
+/nt/05Jn/jn28-s
+/nt/05Jn/jn3-s
+/nt/05Jn/jn9-s
+/nt/05Jn/jn22-s
+/nt/05Jn/jn29a-s
+/nt/05Jn/jn35-s
+/nt/05Jn/jn10-s
+/nt/05Jn/jn25-s
+/nt/05Jn/jn4-s
+/nt/05Jn/jn40-s
+/nt/05Jn/jn21-s
+/nt/03Mk
+/nt/03Mk/mk18-s
+/nt/03Mk/mk16-s
+/nt/03Mk/mk5-s
+/nt/03Mk/mk1-s
+/nt/03Mk/mk11-s
+/nt/03Mk/mk15-s
+/nt/03Mk/mk20-s
+/nt/03Mk/mk6-s
+/nt/03Mk/mk12a-s
+/nt/03Mk/mk2-s
+/nt/03Mk/mk8-s
+/nt/03Mk/mk10-s
+/nt/03Mk/mk14-s
+/nt/03Mk/mk7-s
+/nt/03Mk/mk21-s
+/nt/03Mk/mk9-s
+/nt/03Mk/mk3-s
+/nt/03Mk/mk19-s
+/nt/03Mk/mk17-s
+/nt/03Mk/mk4-s
+/nt/06Mk-Basic
+/nt/06Mk-Basic/mkb17-s
+/nt/06Mk-Basic/mkb6-s
+/nt/06Mk-Basic/mkb2-s
+/nt/06Mk-Basic/mkb8-s
+/nt/06Mk-Basic/mkb19-s
+/nt/06Mk-Basic/mkb13-s
+/nt/06Mk-Basic/mkb5-s
+/nt/06Mk-Basic/mkb14-s
+/nt/06Mk-Basic/mkb10-s
+/nt/06Mk-Basic/mkb1-s
+/nt/06Mk-Basic/mkb4-s
+/nt/06Mk-Basic/mkb15-s
+/nt/06Mk-Basic/mkb11-s
+/nt/06Mk-Basic/mkb20-s
+/nt/06Mk-Basic/mkb16-s
+/nt/06Mk-Basic/mkb7-s
+/nt/06Mk-Basic/mkb9-s
+/nt/06Mk-Basic/mkb3-s
+/nt/06Mk-Basic/mkb12-s
+/nt/06Mk-Basic/mkb18-s
+/topic
+/topic/10 Lessons
+/topic/10 Lessons/10lessons07-s
+/topic/10 Lessons/10lessons09-s
+/topic/10 Lessons/10lessons03-s
+/topic/10 Lessons/10lessons04-s
+/topic/10 Lessons/10lessons05-s
+/topic/10 Lessons/10lessons01-s
+/topic/10 Lessons/10lessons06-s
+/topic/10 Lessons/10lessons02-s
+/topic/10 Lessons/10lessons08-s
+/topic/Life Building
+/topic/Life Building/180422-s
+/topic/Life Building/boothfeast-s
+/topic/Life Building/christ-church-s
+/topic/Life Building/prosperity-s
+/topic/Life Building/overcomer-s
+/topic/Life Building/live4god2-s
+/topic/Life Building/180107-s
+/topic/Life Building/inchrist-s
+/topic/Life Building/bless and curse-s
+/topic/Life Building/whogoduses-s
+/topic/Life Building/heavenlycall-s
+/topic/Life Building/170423-s
+/topic/Life Building/180325-s
+/topic/Life Building/170312-s
+/topic/Life Building/legalism-s
+/topic/Life Building/180520-s
+/topic/Life Building/170226-s
+/topic/Life Building/knowinggod-s
+/topic/Life Building/7evilspirits2-s
+/topic/Life Building/170409-s
+/topic/Life Building/chosen-s
+/topic/Life Building/180506-s
+/topic/Life Building/170514-s
+/topic/Life Building/lostark-s
+/topic/Life Building/live4god-s
+/topic/Life Building/union-s
+/topic/God's Timing
+/topic/God's Timing/171015-s
+/topic/God's Timing/wildfires-s
+/topic/God's Timing/171001-s
+/topic/God's Timing/revival-s
+/topic/God's Timing/180128-s
+/topic/God's Timing/170618-s
+/topic/God's Timing/paradise-s
+/topic/God's Timing/election-s
+/topic/God's Timing/feasts-s
+/topic/God's Timing/170122-s
+/topic/God's Timing/endtime-s
+/topic/God's Timing/signs-s
+/topic/God's Timing/180218-s
+/topic/God's Timing/plague-s
+/topic/God's Timing/171231-s
+/topic/God's Timing/lostark-s
+/topic/God's Timing/season-s
+/topic/Church History
+/topic/Church History/church_history15-s
+/topic/Church History/church_history11-s
+/topic/Church History/church_history
+/topic/Church History/church_history01-s
+/topic/Church History/church_history05-s
+/topic/Church History/church_history16-s
+/topic/Church History/church_history12-s
+/topic/Church History/church_history18-s
+/topic/Church History/church_history02-s
+/topic/Church History/church_history08-s
+/topic/Church History/church_history06-s
+/topic/Church History/church_history17-s
+/topic/Church History/church_history19-s
+/topic/Church History/church_history13-s
+/topic/Church History/church_history09-s
+/topic/Church History/church_history03-s
+/topic/Church History/church_history07-s
+/topic/Church History/church_history14-s
+/topic/Church History/church_history10-s
+/topic/Church History/church_history04-s
+/topic/Short Topics
+/topic/Short Topics/church-s
+/topic/Short Topics/bible introduction5-s
+/topic/Short Topics/relation-s
+/topic/Short Topics/70-7-s
+/topic/Short Topics/basic-2-s
+/topic/Short Topics/cross section-s
+/topic/Short Topics/baptism-s
+/topic/Short Topics/ot history-s
+/topic/Short Topics/rain-s
+/topic/Short Topics/prophecy2-s
+/topic/Short Topics/basic-1-s
+/topic/Short Topics/bible_list-s
+/topic/Short Topics/basic-4-s
+/topic/Short Topics/sheep-s
+/topic/Short Topics/EU-s
+/topic/Short Topics/jehovahs_witnesses-s
+/topic/Short Topics/basic-3-s
+/topic/Short Topics/zion-s
+/topic/Short Topics/4bloodmoons-s
+/topic/Short Topics/lordsupper2-s
+/topic/Short Topics/church_history-s
+/ot
+/ot/17Job
+/ot/17Job/job1-s
+/ot/17Job/job2-s
+/ot/17Job/job01-s
+/ot/17Job/job3-s
+/ot/14Ezra
+/ot/14Ezra/ezra1-s
+/ot/14Ezra/ezra2-s
+/ot/14Ezra/ezra3-s
+/ot/14Ezra/ezra4-s
+/ot/07Deut
+/ot/07Deut/deut01-s
+/ot/07Deut/deut05-s
+/ot/07Deut/deut02-s
+/ot/07Deut/deut06-s
+/ot/07Deut/deut03-s
+/ot/07Deut/deut04-s
+/ot/18Ps
+/ot/18Ps/170224-s
+/ot/18Ps/ps20-s
+/ot/18Ps/ps24-s
+/ot/18Ps/ps11-s
+/ot/18Ps/ps4-s
+/ot/18Ps/ps30-s
+/ot/18Ps/ps15-s
+/ot/18Ps/ps29-s
+/ot/18Ps/ps23-s
+/ot/18Ps/ps27-s
+/ot/18Ps/ps3-s
+/ot/18Ps/ps9-s
+/ot/18Ps/ps12-s
+/ot/18Ps/ps16-s
+/ot/18Ps/ps7-s
+/ot/18Ps/ps22-s
+/ot/18Ps/ps28-s
+/ot/18Ps/ps8-s
+/ot/18Ps/ps13-s
+/ot/18Ps/ps6-s
+/ot/18Ps/ps21-s
+/ot/18Ps/ps25-s
+/ot/18Ps/ps10-s
+/ot/18Ps/ps1-s
+/ot/18Ps/ps5-s
+/ot/18Ps/ps14-s
+/ot/25Daniel
+/ot/25Daniel/daniel3-s
+/ot/25Daniel/daniel7-s
+/ot/25Daniel/daniel4-s
+/ot/25Daniel/daniel1-s
+/ot/25Daniel/daniel5-s
+/ot/25Daniel/daniel2-s
+/ot/10Ruth
+/ot/10Ruth/ruth02-s
+/ot/10Ruth/ruth01-s
+/ot/08Josh
+/ot/08Josh/Josh1-s
+/ot/08Josh/Josh2-s
+/ot/08Josh/Josh6-s
+/ot/08Josh/Josh5a-s
+/ot/08Josh/Josh3-s
+/ot/08Josh/Josh4-s
+/ot/11Sam
+/ot/11Sam/sam16-s
+/ot/11Sam/sam18-s
+/ot/11Sam/sam12-s
+/ot/11Sam/sam08-s
+/ot/11Sam/sam02-s
+/ot/11Sam/sam06-s
+/ot/11Sam/sam15-s
+/ot/11Sam/sam11-s
+/ot/11Sam/sam01-s
+/ot/11Sam/sam05-s
+/ot/11Sam/sam14-s
+/ot/11Sam/sam10-s
+/ot/11Sam/sam04-s
+/ot/11Sam/sam17-s
+/ot/11Sam/sam13-s
+/ot/11Sam/sam03-s
+/ot/11Sam/sam09-s
+/ot/11Sam/sam07-s
+/ot/15Neh
+/ot/15Neh/neh1-s
+/ot/15Neh/neh5-s
+/ot/15Neh/neh2-s
+/ot/15Neh/neh6-s
+/ot/15Neh/neh3-s
+/ot/15Neh/neh4-s
+/ot/13Chron
+/ot/13Chron/1chron7-s
+/ot/13Chron/2chron4-s
+/ot/13Chron/1chron3-s
+/ot/13Chron/2chron3-s
+/ot/13Chron/1chron4-s
+/ot/13Chron/2chron7-s
+/ot/13Chron/2chron8-s
+/ot/13Chron/1chron5-s
+/ot/13Chron/2chron2-s
+/ot/13Chron/1chron1-s
+/ot/13Chron/2chron6-s
+/ot/13Chron/1chron6-s
+/ot/13Chron/2chron1-s
+/ot/13Chron/1chron2-s
+/ot/13Chron/2chron5-s
+/ot/12Kings
+/ot/12Kings/kings04-s
+/ot/12Kings/1King6-s
+/ot/12Kings/2King11-s
+/ot/12Kings/1King2-s
+/ot/12Kings/2King4-s
+/ot/12Kings/kings10-s
+/ot/12Kings/kings14-s
+/ot/12Kings/kings07-s
+/ot/12Kings/1King5-s
+/ot/12Kings/kings09-s
+/ot/12Kings/1King1-s
+/ot/12Kings/kings03-s
+/ot/12Kings/2King12-s
+/ot/12Kings/kings13-s
+/ot/12Kings/2King7-s
+/ot/12Kings/2King3-s
+/ot/12Kings/2King9-s
+/ot/12Kings/kings17-s
+/ot/12Kings/1King4-s
+/ot/12Kings/kings06-s
+/ot/12Kings/kings02-s
+/ot/12Kings/1King0-s
+/ot/12Kings/kings08-s
+/ot/12Kings/1King2a-s
+/ot/12Kings/2King13-s
+/ot/12Kings/kings12-s
+/ot/12Kings/pillars-s
+/ot/12Kings/2King6-s
+/ot/12Kings/2King8-s
+/ot/12Kings/kings16-s
+/ot/12Kings/1King7-s
+/ot/12Kings/kings05-s
+/ot/12Kings/2King10-s
+/ot/12Kings/kings01-s
+/ot/12Kings/2King5-s
+/ot/12Kings/kings11-s
+/ot/12Kings/kings15-s
+/ot/12Kings/2King1-s
+/ot/26Minor
+/ot/26Minor/hosea2-s
+/ot/26Minor/haggai1-s
+/ot/26Minor/mal-s
+/ot/26Minor/jonah2-s
+/ot/26Minor/hab-s
+/ot/26Minor/amos2-s
+/ot/26Minor/zech4-s
+/ot/26Minor/hosea1-s
+/ot/26Minor/zeph-s
+/ot/26Minor/haggai2-s
+/ot/26Minor/hosea5-s
+/ot/26Minor/jonah1-s
+/ot/26Minor/zech3-s
+/ot/26Minor/amos1-s
+/ot/26Minor/nahum1-s
+/ot/26Minor/hosea4-s
+/ot/26Minor/micah1-s
+/ot/26Minor/zech2-s
+/ot/26Minor/oba-s
+/ot/26Minor/hosea3-s
+/ot/26Minor/nahum2-s
+/ot/26Minor/zech1-s
+/ot/26Minor/micah2-s
+/ot/26Minor/amos3-s
+/ot/05Lev
+/ot/05Lev/lev05-s
+/ot/05Lev/lev01-s
+/ot/05Lev/lev06-s
+/ot/05Lev/lev02-s
+/ot/05Lev/lev03-s
+/ot/05Lev/lev04-s
+/ot/16Esther
+/ot/16Esther/esther2-s
+/ot/16Esther/esther1-s
+/ot/20Eccl
+/ot/20Eccl/eccl3-s
+/ot/20Eccl/eccl4-s
+/ot/20Eccl/eccl1-s
+/ot/20Eccl/eccl2-s
+/ot/04Exodus
+/ot/04Exodus/exodus04-s
+/ot/04Exodus/exodus10-s
+/ot/04Exodus/exodus09-s
+/ot/04Exodus/exodus03-s
+/ot/04Exodus/exodus07-s
+/ot/04Exodus/exodus13-s
+/ot/04Exodus/exodus02-s
+/ot/04Exodus/exodus08-s
+/ot/04Exodus/exodus06-s
+/ot/04Exodus/exodus12-s
+/ot/04Exodus/exodus01-s
+/ot/04Exodus/exodus05-s
+/ot/04Exodus/num07-s
+/ot/04Exodus/exodus11-s
+/ot/23Jer
+/ot/23Jer/jer2-s
+/ot/23Jer/lam4-s
+/ot/23Jer/jer8-s
+/ot/23Jer/jer15-s
+/ot/23Jer/jer11-s
+/ot/23Jer/jer6-s
+/ot/23Jer/jer20-s
+/ot/23Jer/jer1-s
+/ot/23Jer/jer16-s
+/ot/23Jer/jer12-s
+/ot/23Jer/jer18-s
+/ot/23Jer/jer5-s
+/ot/23Jer/lam3-s
+/ot/23Jer/jer17-s
+/ot/23Jer/lam2-s
+/ot/23Jer/jer4-s
+/ot/23Jer/jer19-s
+/ot/23Jer/jer13-s
+/ot/23Jer/jer14-s
+/ot/23Jer/jer9-s
+/ot/23Jer/jer3-s
+/ot/23Jer/lam1-s
+/ot/23Jer/jer7-s
+/ot/23Jer/jer10-s
+/ot/22Isa
+/ot/22Isa/isa32-s
+/ot/22Isa/isa17-s
+/ot/22Isa/isa19-s
+/ot/22Isa/isa13-s
+/ot/22Isa/isa4-s
+/ot/22Isa/isa22-s
+/ot/22Isa/isa28-s
+/ot/22Isa/isa14-s
+/ot/22Isa/isa31-s
+/ot/22Isa/isa3-s
+/ot/22Isa/isa9-s
+/ot/22Isa/isa7-s
+/ot/22Isa/isa10-s
+/ot/22Isa/isa21-s
+/ot/22Isa/isa15-s
+/ot/22Isa/isa8-s
+/ot/22Isa/isa30-s
+/ot/22Isa/isa2-s
+/ot/22Isa/isa6-s
+/ot/22Isa/isa11-s
+/ot/22Isa/isa24-s
+/ot/22Isa/isa20-s
+/ot/22Isa/isa1-s
+/ot/22Isa/isa16-s
+/ot/22Isa/isa12-s
+/ot/22Isa/isa18-s
+/ot/22Isa/isa5-s
+/ot/22Isa/isa27-s
+/ot/22Isa/isa29-s
+/ot/22Isa/isa23-s
+/ot/21SS
+/ot/21SS/ss04-s
+/ot/21SS/ss03-s
+/ot/21SS/ss02-s
+/ot/21SS/ss01-s
+/ot/21SS/ss05-s
+/ot/03Gen-Basic
+/ot/03Gen-Basic/genb06-s
+/ot/03Gen-Basic/genb02-s
+/ot/03Gen-Basic/genb05-s
+/ot/03Gen-Basic/gen001-s
+/ot/03Gen-Basic/genb04-s
+/ot/03Gen-Basic/genb03-s
+/ot/09Judges
+/ot/09Judges/judges04-s
+/ot/09Judges/171105-s
+/ot/09Judges/judges03-s
+/ot/09Judges/judges06-s
+/ot/09Judges/judges02-s
+/ot/09Judges/judges05-s
+/ot/09Judges/judges01-s
+/ot/24Ezek
+/ot/24Ezek/ezek6-s
+/ot/24Ezek/ezek14-s
+/ot/24Ezek/ezek10-s
+/ot/24Ezek/ezek8-s
+/ot/24Ezek/ezek2-s
+/ot/24Ezek/ezek5-s
+/ot/24Ezek/ezek1-s
+/ot/24Ezek/ezek13-s
+/ot/24Ezek/ezek4-s
+/ot/24Ezek/ezek12-s
+/ot/24Ezek/ezek7-s
+/ot/24Ezek/ezek15-s
+/ot/24Ezek/ezek11-s
+/ot/24Ezek/ezek3-s
+/ot/24Ezek/ezek9-s
+/ot/01Review
+/ot/01Review/ot_review25-s
+/ot/01Review/ot_review21-s
+/ot/01Review/exodus3-s
+/ot/01Review/ot_review9-s
+/ot/01Review/ot_review14-s
+/ot/01Review/ot_review3-s
+/ot/01Review/ot_review10-s
+/ot/01Review/ot_review26-s
+/ot/01Review/ot_review22-s
+/ot/01Review/ot_review17-s
+/ot/01Review/ot_review13-s
+/ot/01Review/ot_review4-s
+/ot/01Review/ot_review19-s
+/ot/01Review/ot_review27-s
+/ot/01Review/ot_review23-s
+/ot/01Review/ot_review1-s
+/ot/01Review/ot_review16-s
+/ot/01Review/exodus1-s
+/ot/01Review/ot_review18-s
+/ot/01Review/ot_review5-s
+/ot/01Review/ot_review12-s
+/ot/01Review/ezra-r1-s
+/ot/01Review/ot_review24-s
+/ot/01Review/ot_review20-s
+/ot/01Review/exodus2-s
+/ot/01Review/ot_review2-s
+/ot/01Review/ot_review15-s
+/ot/01Review/ot_review11-s
+/ot/06Num
+/ot/06Num/num06-s
+/ot/06Num/num02-s
+/ot/06Num/num08-s
+/ot/06Num/num11-s
+/ot/06Num/num05-s
+/ot/06Num/num01-s
+/ot/06Num/num10-s
+/ot/06Num/num04-s
+/ot/06Num/num09-s
+/ot/06Num/num03-s
+/ot/02Gen
+/ot/02Gen/gen016-s
+/ot/02Gen/gen018-s
+/ot/02Gen/gen012-s
+/ot/02Gen/gen008-s
+/ot/02Gen/gen002-s
+/ot/02Gen/180513-s
+/ot/02Gen/gen023-s
+/ot/02Gen/gen006-s
+/ot/02Gen/gen015-s
+/ot/02Gen/gen011-s
+/ot/02Gen/gen005-s
+/ot/02Gen/gen020-s
+/ot/02Gen/gen014-s
+/ot/02Gen/gen010-s
+/ot/02Gen/gen004-s
+/ot/02Gen/gen021-s
+/ot/02Gen/gen017-s
+/ot/02Gen/gen013-s
+/ot/02Gen/gen019-s
+/ot/02Gen/gen003-s
+/ot/02Gen/gen009-s
+/ot/02Gen/gen022-s
+/ot/02Gen/gen007-s

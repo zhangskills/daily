@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.7/css/layui.css">
+</head>
+<body>
+
+<div id="demo" lay-filter="test"></div>
+
+
+<script src="https://www.layuicdn.com/layui-v2.5.7/layui.js"></script>
+<script src="https://hq.sinajs.cn/list=s_sh000001"></script>
+<script src="https://hq.sinajs.cn/list=s_sz399001"></script>
+<script src="https://hq.sinajs.cn/list=s_sz399006"></script>
+<script>
+    var data = [
+        {
+            id: 'sh000001',
+            name: hq_str_s_sh000001.split(',')[0],
+            value: hq_str_s_sh000001.split(',')[1],
+            zl: hq_str_s_sh000001.split(',')[3] + '%'
+        },
+        {
+            id: 'sz399001',
+            name: hq_str_s_sz399001.split(',')[0],
+            value: hq_str_s_sz399001.split(',')[1],
+            zl: hq_str_s_sz399001.split(',')[3] + '%'
+        }
+    ];
+    var jsonpgz = function (d) {
+        data.push({
+            id: d.fundcode,
+            name: d.name,
+            value: d.dwjz,
+            date: d.gztime,
+            zl: d.gszzl + '%'
+        });
+    }
+</script>
+
+<script src="https://fundgz.1234567.com.cn/js/005918.js"></script>
+<script src="https://fundgz.1234567.com.cn/js/004070.js"></script>
+<script src="https://fundgz.1234567.com.cn/js/000751.js"></script>
+<script src="https://fundgz.1234567.com.cn/js/005267.js"></script>
+<script src="https://fundgz.1234567.com.cn/js/004476.js"></script>
+
+<script>
+    layui.use('table', function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#demo'
+            , cols: [[ //表头
+                {field: 'id', title: 'ID', sort: true}
+                , {field: 'name', title: 'name', sort: true}
+                , {field: 'date', title: 'date', sort: true}
+                , {field: 'value', title: 'value', sort: true}
+                , {field: 'zl', title: 'zl', sort: true}
+            ]],
+            data: data
+        });
+    });
+</script>
+</body>
+</html>
