@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.typesafe.config.Config;
 
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
@@ -19,6 +20,7 @@ import io.jooby.freemarker.FreemarkerModule;
 import io.jooby.hikari.HikariModule;
 import io.jooby.json.JacksonModule;
 import lombok.extern.slf4j.Slf4j;
+import my.service.PushPlusService;
 import no.api.freemarker.java8.Java8ObjectWrapper;
 
 @Slf4j
@@ -44,6 +46,8 @@ public class JoobyConfig extends Jooby {
         // Jackson
         installJackson();
 
+        Config config = getEnvironment().getConfig();
+        PushPlusService.setToken(config.getString("pushplus.token"));
     }
 
     private void installJackson() {

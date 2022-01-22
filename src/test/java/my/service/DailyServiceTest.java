@@ -1,10 +1,13 @@
 package my.service;
 
 import lombok.extern.slf4j.Slf4j;
+import my.config.JoobyConfig;
+
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -15,11 +18,16 @@ import java.util.List;
 @Slf4j
 public class DailyServiceTest {
 
+    @BeforeClass
+    public static void beforeClass() {
+        new JoobyConfig();
+    }
+
     @Test
     public void name() {
     }
 
-    //    @Test
+       @Test
     public void send() throws IOException {
         DailyService.send();
     }

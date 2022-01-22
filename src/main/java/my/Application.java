@@ -10,12 +10,10 @@ import my.config.JoobyConfig;
 import my.route.DailyByTodayRoute;
 import my.route.DailyByWeekRoute;
 import my.route.SjpptRoute;
-import my.service.PushPlusService;
 import my.task.SchedulerUtils;
 
 @Slf4j
 public class Application extends Jooby {
-
     {
         install(JoobyConfig::new);
 
@@ -27,7 +25,6 @@ public class Application extends Jooby {
         mount(new SjpptRoute(config.getString("sjppt.volumeName"), config.getString("sjppt.imageBasePath")));
 
         try {
-            PushPlusService.setToken(config.getString("pushplus.token"));
             new SchedulerUtils().run();
         } catch (SchedulerException e) {
             log.error("", e);
