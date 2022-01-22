@@ -10,8 +10,8 @@
 logs
 target
 baiduSpider.iml
-src/main/resources/**/application.yml
-src/main/resources/**/logback.xml
+src/main/resources/application.conf
+src/main/resources/logback.xml
 
 src/**/resources/jcseg.properties
 src/**/resources/lexicon*

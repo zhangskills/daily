@@ -1,17 +1,18 @@
 package my.service;
 
-import lombok.extern.slf4j.Slf4j;
-import my.utils.RegexUtils;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
-import spark.utils.StringUtils;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
+import my.utils.RegexUtils;
 
 @Slf4j
 public class JonahomeHtmlService2 {
@@ -39,8 +40,7 @@ public class JonahomeHtmlService2 {
         String fileName = week + "." + day + ".md";
 
         try (BufferedWriter fw0 = new BufferedWriter(new FileWriter("SUMMARY.md", true));
-             BufferedWriter fw = new BufferedWriter(new FileWriter("gitbook/" + fileName));
-        ) {
+                BufferedWriter fw = new BufferedWriter(new FileWriter("gitbook/" + fileName));) {
             fw0.append("* [第").append(week).append("周 第").append(day).append("天](").append(fileName).append(")");
             fw0.newLine();
 

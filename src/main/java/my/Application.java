@@ -1,19 +1,21 @@
 package my;
 
+import io.jooby.Jooby;
 import lombok.extern.slf4j.Slf4j;
+import my.config.JoobyConfig;
 import my.route.IndexRoute;
 
-import static spark.Spark.*;
-
 @Slf4j
-public class Application {
+public class Application extends Jooby {
 
-    public static void main(String[] args) {
-        threadPool(5, 1, 30_000);
-        port(8080);
+    {
+        install(JoobyConfig::new);
 
-        get("/", IndexRoute.indexRoute);
-        get("/w/:week", IndexRoute.weekRoute);
+        /** 挂载路由 */
+        mount(new IndexRoute());
     }
 
+    public static void main(String[] args) {
+        Jooby.runApp(args, Application::new);
+    }
 }

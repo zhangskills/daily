@@ -1,20 +1,21 @@
 package my.service;
 
-import lombok.extern.slf4j.Slf4j;
-import my.model.JonahomeHtmlModel;
-import my.model.query.QJonahomeHtmlModel;
-import my.utils.RegexUtils;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import spark.utils.IOUtils;
 
-import java.io.IOException;
+import io.jooby.internal.$shaded.io.IOUtils;
+import lombok.extern.slf4j.Slf4j;
+import my.model.JonahomeHtmlModel;
+import my.model.query.QJonahomeHtmlModel;
+import my.utils.RegexUtils;
 
 @Slf4j
 public class JonahomeHtmlService {
-
 
     public void crawlAll() throws IOException {
         for (int i = 0; i < 53; i++) {
@@ -38,7 +39,8 @@ public class JonahomeHtmlService {
     }
 
     public String getContentByHtml(int week) throws IOException {
-        String html = IOUtils.toString(JonahomeHtmlService.class.getResourceAsStream("/jonahome/" + week + ".html"));
+        String html = IOUtils.toString(JonahomeHtmlService.class.getResourceAsStream("/jonahome/" + week + ".html"),
+                StandardCharsets.UTF_8);
         return formatContent(html);
     }
 
@@ -70,7 +72,7 @@ public class JonahomeHtmlService {
                 e.select("td:contains(第)").get(0).attr("width", "20%");
                 String s = e.select("td:contains(日)").get(0).text();
                 String day = RegexUtils.getFirst("(\\d+)", s);
-//                log.info("====={}", day);
+                // log.info("====={}", day);
                 e.attr("id", "day" + day)
                         .attr("width", "80%")
                         .attr("style", "margin: 10px auto 0 auto;");
