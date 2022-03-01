@@ -1,18 +1,29 @@
 package my.service;
 
-import lombok.extern.slf4j.Slf4j;
-import my.model.DailyModel;
+import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Base64;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.imageio.ImageIO;
+
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TablesExtension;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import lombok.extern.slf4j.Slf4j;
+import me.chanjar.weixin.common.error.WxErrorException;
+import my.config.JoobyConfig;
+import my.model.DailyModel;
 
 @Slf4j
 public abstract class DailyService {
@@ -22,19 +33,33 @@ public abstract class DailyService {
     private static HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).build();
     private static Pattern imgSrcPattern = Pattern.compile("img src=\"(.*?)\"");
 
-    public static void send() throws IOException {
+    public static void send() throws IOException, WxErrorException {
         DailyModel dailyModel = getDailyModelByToday();
         if (dailyModel != null) {
-//        log.info(html);
-            PushPlusService.sendForDaily(dailyModel.getTitle(), dailyModel.getHtml());
+            // log.info(html);
+            MyWxCpService wxCpService = JoobyConfig.getBeanByClass(MyWxCpService.class);
+            dailyModel.getTextContentsForWorkWx().forEach(content -> {
+                try {
+                    wxCpService.sendByDaily(content);
+                } catch (WxErrorException e) {
+                    log.error("", e);
+                }
+            });
         }
     }
 
-    public static void send(int week, int day) throws IOException {
+    public static void send(int week, int day) throws IOException, WxErrorException {
         DailyModel dailyModel = getDailyModel(week, day);
         if (dailyModel != null) {
-//        log.info(html);
-            PushPlusService.sendForDaily(dailyModel.getTitle(), dailyModel.getHtml());
+            // log.info(html);
+            MyWxCpService wxCpService = JoobyConfig.getBeanByClass(MyWxCpService.class);
+            dailyModel.getTextContentsForWorkWx().forEach(content -> {
+                try {
+                    wxCpService.sendByDaily(content);
+                } catch (WxErrorException e) {
+                    log.error("", e);
+                }
+            });
         }
     }
 
@@ -90,6 +115,8 @@ public abstract class DailyService {
             }
         }
         DailyModel dailyModel = new DailyModel();
+        dailyModel.setWeek(week);
+        dailyModel.setDay(day);
         dailyModel.setTitle(title.toString());
 
         String markdown = text.toString();

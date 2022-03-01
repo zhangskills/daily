@@ -1,7 +1,9 @@
 package my.config;
 
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.TimeZone;
 
 import javax.sql.DataSource;
@@ -20,11 +22,13 @@ import io.jooby.freemarker.FreemarkerModule;
 import io.jooby.hikari.HikariModule;
 import io.jooby.json.JacksonModule;
 import lombok.extern.slf4j.Slf4j;
-import my.service.PushPlusService;
+import my.service.MyWxCpService;
 import no.api.freemarker.java8.Java8ObjectWrapper;
 
 @Slf4j
 public class JoobyConfig extends Jooby {
+
+    public static Map<Class<?>, Object> classBeanFactory = new HashMap<>();
 
     {
         // 设置数据库
@@ -33,12 +37,12 @@ public class JoobyConfig extends Jooby {
         DatabaseConfig dbConfig = new DatabaseConfig();
         dbConfig.setDataSource(require(DataSource.class));
         dbConfig.addPackage("my.model");
-        
+
         // dbConfig.setDdlGenerate(true);
         // dbConfig.setDdlRun(true);
         // dbConfig.setDdlCreateOnly(true);
 
-        install(new EbeanModule(dbConfig));        
+        install(new EbeanModule(dbConfig));
 
         // 安装插件
         // Freemarker
@@ -47,7 +51,17 @@ public class JoobyConfig extends Jooby {
         installJackson();
 
         Config config = getEnvironment().getConfig();
-        PushPlusService.setToken(config.getString("pushplus.token"));
+
+        String corpId = config.getString("workWx.xiny.corpId");
+        String corpSecret = config.getString("workWx.xiny.corpSecret");
+        Integer agentId = config.getInt("workWx.xiny.agentId");
+        classBeanFactory.put(MyWxCpService.class, new MyWxCpService(corpId, corpSecret, agentId));
+
+        // PushPlusService.setToken(config.getString("pushplus.token"));
+    }
+
+    public static <T> T getBeanByClass(Class<T> clazz) {
+        return (T) classBeanFactory.get(clazz);
     }
 
     private void installJackson() {

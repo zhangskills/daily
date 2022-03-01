@@ -26,14 +26,14 @@ public class DailyByWeekRoute extends Jooby {
             Map<String, Object> attributes = new HashMap<>();
 
             int week = ctx.path("week").intValue();
-            if (week < 0 || week > 52) {
+            if (week < 1 || week > 52) {
                 ctx.sendRedirect("/");
                 return null;
             }
             String dateStr = new SimpleDateFormat("yyyy-MM-dd EEEE", Locale.CHINA).format(new Date());
             attributes.put("dateStr", dateStr + " 第" + Calendar.getInstance().get(Calendar.WEEK_OF_YEAR) + "周");
 
-            if (week > 0) {
+            if (week > 1) {
                 attributes.put("lastUrl", "/w/" + (week - 1));
             }
             if (week < 52) {

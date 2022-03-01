@@ -1,11 +1,13 @@
 package my.task;
 
-import lombok.extern.slf4j.Slf4j;
-import my.service.DailyService;
+import java.io.IOException;
+
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 
-import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
+import me.chanjar.weixin.common.error.WxErrorException;
+import my.service.DailyService;
 
 @Slf4j
 public class DailyAbideWithMeJob implements Job {
@@ -14,7 +16,7 @@ public class DailyAbideWithMeJob implements Job {
     public void execute(JobExecutionContext context) {
         try {
             DailyService.send();
-        } catch (IOException e) {
+        } catch (IOException | WxErrorException e) {
             log.error("", e);
         }
     }
