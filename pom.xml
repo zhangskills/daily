@@ -16,7 +16,7 @@
 
     <groupId>my</groupId>
     <artifactId>daily</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
 
     <!-- Add typical dependencies for a web application -->
     <dependencies>
