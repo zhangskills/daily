@@ -1,9 +1,13 @@
 package my.service;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.cp.api.WxCpExternalContactService;
 import me.chanjar.weixin.cp.api.impl.WxCpServiceImpl;
+import me.chanjar.weixin.cp.bean.article.NewArticle;
 import me.chanjar.weixin.cp.bean.external.WxCpUserExternalGroupChatList;
 import me.chanjar.weixin.cp.bean.message.WxCpMessage;
 import me.chanjar.weixin.cp.config.impl.WxCpDefaultConfigImpl;
@@ -21,7 +25,7 @@ public class MyWxCpService {
         this.agentId = agentId;
     }
 
-    public void sendByDaily(String msg) throws WxErrorException {
+    public void sendByDaily(String title, String desc, String url) throws WxErrorException, IOException {
         WxCpDefaultConfigImpl config = new WxCpDefaultConfigImpl();
         config.setCorpId(corpId); // 设置微信企业号的appid
         config.setCorpSecret(corpSecret); // 设置微信企业号的app corpSecret
@@ -35,7 +39,13 @@ public class MyWxCpService {
             log.info("groupId:{}", m.getChatId());
         });
 
-        WxCpMessage message = WxCpMessage.TEXT().content(msg).toUser("@all").build();
+        NewArticle newArticle = new NewArticle();
+        newArticle.setTitle(title);
+        newArticle.setDescription(desc);
+        newArticle.setUrl(url);
+
+        WxCpMessage message = WxCpMessage.NEWS().addArticle(newArticle).toUser("@all").build();
+
         // WxCpMessage message =
         // WxCpMessage.TEXT().toUser("zhangmengjie").content(content).build();
         log.info("send message");

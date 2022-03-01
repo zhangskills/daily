@@ -38,13 +38,7 @@ public abstract class DailyService {
         if (dailyModel != null) {
             // log.info(html);
             MyWxCpService wxCpService = JoobyConfig.getBeanByClass(MyWxCpService.class);
-            dailyModel.getTextContentsForWorkWx().forEach(content -> {
-                try {
-                    wxCpService.sendByDaily(content);
-                } catch (WxErrorException e) {
-                    log.error("", e);
-                }
-            });
+            wxCpService.sendByDaily(dailyModel.getTitle(), dailyModel.getText(), dailyModel.getUrl());
         }
     }
 
@@ -53,13 +47,7 @@ public abstract class DailyService {
         if (dailyModel != null) {
             // log.info(html);
             MyWxCpService wxCpService = JoobyConfig.getBeanByClass(MyWxCpService.class);
-            dailyModel.getTextContentsForWorkWx().forEach(content -> {
-                try {
-                    wxCpService.sendByDaily(content);
-                } catch (WxErrorException e) {
-                    log.error("", e);
-                }
-            });
+            wxCpService.sendByDaily(dailyModel.getTitle(), dailyModel.getText(), dailyModel.getUrl());
         }
     }
 
