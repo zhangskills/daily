@@ -207,47 +207,6 @@
                 </executions>
             </plugin>
 
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>3.1.4</version>
-                <configuration>
-                    <!-- <from> -->
-                    <!-- <image>adoptopenjdk/openjdk11:alpine</image> -->
-                    <!-- <image>registry.cn-hangzhou.aliyuncs.com/dragonwell/dragonwell8:dragonwell-8.8.9_jdk8u302-ga</image> -->
-                    <!-- </from> -->
-                    <extraDirectories>
-                        <paths>
-                            <!--设置远程配置文件-->
-                            <path>
-                                <from>src/main/resources/remote</from>
-                                <into>/usr/src/myapp</into>
-                            </path>
-                        </paths>
-                    </extraDirectories>
-                    <to>
-                        <image>ccr.ccs.tencentyun.com/zhangskills/daily</image>
-                        <tags>
-                            <tag>${project.version}</tag>
-                            <tag>latest</tag>
-                        </tags>
-                    </to>
-                    <allowInsecureRegistries>true</allowInsecureRegistries>
-                    <container>
-                        <appRoot>/usr/src/myapp</appRoot>
-                        <!--jvm内存参数-->
-                        <jvmFlags>
-                            <jvmFlag>-Dfile.encoding=UTF-8</jvmFlag>
-                            <jvmFlag>-Xms64m</jvmFlag>
-                            <jvmFlag>-Xmx256m</jvmFlag>
-                        </jvmFlags>
-                        <!--要暴露的端口-->
-                        <ports>
-                            <port>8080</port>
-                        </ports>
-                    </container>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
