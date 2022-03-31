@@ -2,7 +2,11 @@
 
 git pull
 
-mvn clean package -DskipTests=true jib:dockerBuild
+# mvn clean
+
+# mvn package -Dmaven.test.skip=true
+
+# docker build -t ccr.ccs.tencentyun.com/zhangskills/daily:1.2 .
 
 docker rm -f daily
 
